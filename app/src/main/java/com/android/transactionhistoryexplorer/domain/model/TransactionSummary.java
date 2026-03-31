@@ -9,8 +9,10 @@ public class TransactionSummary {
     private String receiverName;
     private long timestamp;
     private String note;
+    private int status;
 
-    public TransactionSummary(int id, String transactionCode, double amount, String currency, String senderName, String receiverName, long timestamp, String note) {
+
+    public TransactionSummary(int id, String transactionCode, double amount, String currency, String senderName, String receiverName, long timestamp, String note, int status) {
         this.id = id;
         this.transactionCode = transactionCode;
         this.amount = amount;
@@ -19,6 +21,7 @@ public class TransactionSummary {
         this.receiverName = receiverName;
         this.timestamp = timestamp;
         this.note = note;
+        this.status = status;
     }
 
     public int getId() {
@@ -83,5 +86,13 @@ public class TransactionSummary {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }
